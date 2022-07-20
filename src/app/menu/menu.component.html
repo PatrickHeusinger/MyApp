@@ -1,9 +1,11 @@
-<header>
-    <img src="assets/img/black_flash.jpg">
-    <div>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Impressum</a>
-        <a href="#">Datenschutz</a>
+<header [class.headerDark]="darkMode">
+
+    <img *ngIf="!darkMode" routerLink="/" src="assets/img/black_flash.jpg">
+    <img *ngIf="darkMode" routerLink="/" src="assets/img/bitcoin.webp">
+    <div [class.darkLinks]="darkMode">
+        <a routerLink="/">Home</a>
+        <a routerLink="#">About</a>
+        <a routerLink="/imprint">Impressum</a>
+        <a routerLink="#">Datenschutz</a>
     </div>
 </header>
